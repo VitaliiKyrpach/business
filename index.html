@@ -20,8 +20,13 @@
   <body>
     <header class="header">
       <div class="container">
+        <a class="logo link" href=""
+          ><svg class="logo-icon" width="32" height="29">
+            <use href="./img/sprite.svg#icon-logo"></use>
+          </svg>
+          <span class="logo-text">Product</span></a
+        >
         <nav class="nav">
-          <a class="logo link" href=""><span>Product</span></a>
           <div>
             <ul class="nav-list list">
               <li class="item">Product</li>
@@ -38,6 +43,11 @@
             <input class="" type="checkbox" name="theme" id="theme" /> <label class="check-label" for="theme"><span class="check"></span></label>
           </div>
         </nav>
+        <button class="open-btn" type="button">
+          <svg class="icon" width="28" height="31">
+            <use href="./img/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -329,48 +339,73 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <div>
-          <a href="">Product</a>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Resource</h3>
-          <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Legal Stuff</h3>
-          <ul>
-            <li><a href="">Disclaimer</a></li>
-            <li><a href="">Financing</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div>
-          <p>knowing you're always on the best energy deal.</p>
-          <form>
-            <label aria-label="footer-input"></label>
-            <div>
-              <input type="tel" name="" id="" /><svg>
-                <use></use>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-socials">
+            <a class="logo link" href=""
+              ><svg class="logo-icon" width="32" height="29">
+                <use href="./img/sprite.svg#icon-logo"></use>
               </svg>
-            </div>
-            <button type="submit">Sign up Now</button>
-          </form>
+              <span class="logo-text">Product</span></a
+            >
+            <ul class="soc list">
+              <li class="item">
+                <a class="link" href="">
+                  <svg width="24" height="24">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="item">
+                <a class="link" href=""
+                  ><svg width="24" height="24">
+                    <use href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="item">
+                <a class="link" href=""
+                  ><svg width="24" height="24">
+                    <use href="./img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3 class="title">Resource</h3>
+            <ul class="list">
+              <li><a class="link" href="">About Us</a></li>
+              <li><a class="link" href="">Blog</a></li>
+              <li><a class="link" href="">Contact</a></li>
+              <li><a class="link" href="">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3 class="title">Legal Stuff</h3>
+            <ul class="list">
+              <li><a class="link" href="">Disclaimer</a></li>
+              <li><a class="link" href="">Financing</a></li>
+              <li><a class="link" href="">Privacy Policy</a></li>
+              <li><a class="link" href="">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="form-wrap">
+            <p class="text">knowing you're always on the best energy deal.</p>
+            <form class="form">
+              <label aria-label="footer-input"></label>
+              <div class="input-wrap">
+                <input class="input" type="tel" name="" id="" placeholder="Enter your phone number" /><svg class="icon" width="16" height="24">
+                  <use href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
+              <button class="form-btn" type="submit">Sign up Now</button>
+            </form>
+          </div>
         </div>
+        <p class="content">Made With Love By Product All Right Reserved</p>
       </div>
-      <p>Made With Love By Figmaland All Right Reserved</p>
     </footer>
   </body>
 </html>
