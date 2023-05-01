@@ -20,16 +20,16 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="logo link" href=""
-          ><svg class="logo-icon" width="32" height="29">
+        <a class="logo link" href="">
+          <svg class="logo-icon" width="32" height="29">
             <use href="./img/sprite.svg#icon-logo"></use>
           </svg>
-          <span class="logo-text">Product</span></a
-        >
+          <span class="logo-text">Product</span>
+        </a>
         <nav class="nav">
           <div>
             <ul class="nav-list list">
-              <li class="item">Product</li>
+              <li class="item current">Product</li>
               <li class="item">Pricing</li>
               <li class="item">Customers</li>
               <li class="item">Resources</li>
@@ -43,11 +43,28 @@
             <input class="" type="checkbox" name="theme" id="theme" /> <label class="check-label" for="theme"><span class="check"></span></label>
           </div>
         </nav>
-        <button class="open-btn" type="button">
-          <svg class="icon" width="28" height="31">
-            <use href="./img/sprite.svg#icon-burger"></use>
+        <button class="open-btn" type="button" data-menu-open menu-btn-open>
+          <svg width="28" height="31">
+            <use class="icon-burger" href="./img/sprite.svg#icon-burger"></use>
+            <use class="icon-cross" href="./img/sprite.svg#icon-close"></use>
           </svg>
         </button>
+      </div>
+      <div class="menu-back is-hidden" data-menu>
+        <div class="mob-menu">
+          <nav>
+            <ul class="menu-list list">
+              <li class="item current">Product</li>
+              <li class="item">Pricing</li>
+              <li class="item">Customers</li>
+              <li class="item">Resources</li>
+            </ul>
+            <div>
+              <button class="btn" type="button">Sign In</button>
+              <button class="btn secondary" type="button">Sign Up</button>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -59,7 +76,7 @@
             <h1 class="title">Work at the speed of thought</h1>
             <p class="text">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
             <div class="buttons">
-              <button class="btn secondary" type="button">Get started</button>
+              <button class="btn secondary" type="button" data-modal-open>Get started</button>
               <button class="video-btn" type="button">
                 <svg class="icon" width="17" height="20">
                   <use href="/img/sprite.svg#icon-play"></use>
@@ -112,7 +129,7 @@
               <p class="text">Personal choices and the overall personality of the person.</p>
             </li>
           </ul>
-          <button class="btn secondary" type="button">SIGN UP NOW</button>
+          <button class="btn secondary" type="button" data-modal-open>SIGN UP NOW</button>
         </div>
       </section>
       <!-- description -->
@@ -201,7 +218,7 @@
               <p class="text">I can prototype your app</p>
             </li>
           </ul>
-          <button class="stuff-btn" type="button">Contact our expert</button>
+          <button class="stuff-btn" type="button" data-modal-open>Contact our expert</button>
         </div>
       </section>
       <!-- news -->
@@ -400,12 +417,24 @@
                   <use href="./img/sprite.svg#icon-phone"></use>
                 </svg>
               </div>
-              <button class="form-btn" type="submit">Sign up Now</button>
+              <button class="form-btn" type="submit" data-modal-open>Sign up Now</button>
             </form>
           </div>
         </div>
         <p class="content">Made With Love By Product All Right Reserved</p>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+          <svg class="icon" width="8" height="8">
+            <use href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/button.js"></script>
   </body>
 </html>
