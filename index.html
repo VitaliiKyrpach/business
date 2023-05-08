@@ -16,6 +16,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -27,24 +28,30 @@
           <span class="logo-text">Product</span>
         </a>
         <nav class="nav">
-          <div>
+          <div class="nav-wrap">
             <ul class="nav-list list">
               <li class="item current">Product</li>
               <li class="item">Pricing</li>
               <li class="item">Customers</li>
               <li class="item">Resources</li>
             </ul>
-            <div>
+            <div class="nav-btns">
               <button class="btn" type="button">Sign In</button>
-              <button class="btn secondary" type="button">Sign Up</button>
+              <button class="btn secondary" type="button" data-modal-open>Sign Up</button>
             </div>
           </div>
           <div class="checkbox">
-            <input class="" type="checkbox" name="theme" id="theme" /> <label class="check-label" for="theme"><span class="check"></span></label>
+            <input class="check-input visually-hidden" type="checkbox" name="theme" id="theme" />
+            <label class="check-label" for="theme"
+              ><span class="check">
+                <svg class="icon" width="7" height="14">
+                  <use href="./img/sprite.svg#icon-halfcircle"></use>
+                </svg> </span
+            ></label>
           </div>
         </nav>
         <button class="open-btn" type="button" data-menu-open menu-btn-open>
-          <svg width="28" height="31">
+          <svg class="icon" width="28" height="31">
             <use class="icon-burger" href="./img/sprite.svg#icon-burger"></use>
             <use class="icon-cross" href="./img/sprite.svg#icon-close"></use>
           </svg>
@@ -71,8 +78,12 @@
       <!-- hero -->
       <section class="hero">
         <div class="container">
-          <div><img class="img" src="./img/hero.png" alt="people" width="338" height="311" /></div>
-          <div>
+          <picture class="pic">
+            <source media="(min-width: 1200px)" srcset="./img/hero.png, ./img/hero2x.png 2x" width="610" />
+            <source media="(min-width: 411px)" srcset="./img/hero_mob.png 1x, ./img/hero_mob2x.png 2x" />
+            <img class="img" src="./img/hero_mob.png" alt="people" width="338" />
+          </picture>
+          <div class="content">
             <h1 class="title">Work at the speed of thought</h1>
             <p class="text">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
             <div class="buttons">
@@ -92,7 +103,7 @@
         <div class="container">
           <h2 class="title">Product was Built Specifically for You</h2>
           <ul class="list">
-            <li>
+            <li class="item">
               <div class="icon-block cursor">
                 <svg class="icon" width="12" height="18">
                   <use href="/img/sprite.svg#icon-cursor"></use>
@@ -101,7 +112,7 @@
               <h3 class="caption">First click tests</h3>
               <p class="text">While most people enjoy casino gambling,</p>
             </li>
-            <li>
+            <li class="item">
               <div class="icon-block wave">
                 <svg class="icon" width="18" height="18">
                   <use href="/img/sprite.svg#icon-wave"></use>
@@ -110,7 +121,7 @@
               <h3 class="caption">Design surveys</h3>
               <p class="text">Sports betting, lottery and bingo playing for the fun</p>
             </li>
-            <li>
+            <li class="item">
               <div class="icon-block heart">
                 <svg class="icon" width="16" height="18">
                   <use href="/img/sprite.svg#icon-heart"></use>
@@ -119,7 +130,7 @@
               <h3 class="caption">Preference tests</h3>
               <p class="text">The Myspace page defines the individual.</p>
             </li>
-            <li>
+            <li class="item">
               <div class="icon-block clock">
                 <svg class="icon" width="14" height="18">
                   <use href="/img/sprite.svg#icon-clock"></use>
@@ -136,8 +147,12 @@
       <section class="description">
         <div class="container">
           <ul class="list">
-            <li>
-              <img class="pic" src="/img/management.png" alt="papers" width="349" height="306" />
+            <li class="item">
+              <picture class="pic">
+                <source media="(min-width: 1200px)" srcset="./img/management.png, ./img/management2x.png 2x" width="610" />
+                <source media="(min-width: 411px)" srcset="./img/management_mob.png 1x, ./img/management_mob2x.png 2x" />
+                <img class="img" src="/img/management.png" alt="papers" width="350" />
+              </picture>
               <div class="wrapper">
                 <p class="upper-text">Effortless Validation for</p>
                 <h2 class="title">Management</h2>
@@ -148,8 +163,12 @@
                 <p class="text">If you are looking for a new way to promote your business that won’t cost you more money,</p>
               </div>
             </li>
-            <li>
-              <img class="pic" src="/img/support.png" alt="notebook" width="350" height="319" />
+            <li class="item">
+              <picture class="pic">
+                <source media="(min-width: 1200px)" srcset="./img/support.png, ./img/support2x.png 2x" width="610" />
+                <source media="(min-width: 411px)" srcset="./img/support_mob.png 1x, ./img/support_mob2x.png 2x" />
+                <img class="pic" src="/img/support.png" alt="notebook" width="350" />
+              </picture>
               <div class="wrapper">
                 <p class="upper-text">Easier decision making for</p>
                 <h2 class="title">Customer Support</h2>
@@ -180,8 +199,12 @@
                 </div>
               </div>
             </li>
-            <li>
-              <img src="/img/collaboration.png" alt="folder" width="350" height="291" />
+            <li class="item">
+              <picture class="pic">
+                <source media="(min-width: 1200px)" srcset="./img/collaboration.png, ./img/collaboration2x.png 2x" width="610" />
+                <source media="(min-width: 411px)" srcset="./img/collaboration_mob.png 1x, ./img/collaboration_mob2x.png 2x" />
+                <img src="/img/collaboration.png" alt="folder" width="350" />
+              </picture>
               <div class="wrapper">
                 <p class="upper-text">Optimisation for</p>
                 <h2 class="title">Collaborative</h2>
@@ -202,19 +225,19 @@
           <p class="content">Do you require some help for your project: Conception workshop, prototyping, marketing strategy, landing page, Ux/UI?</p>
           <ul class="stuff-list list">
             <li class="item">
-              <img class="pic" src="./img/avatargirl.jpg" alt="girl" />
+              <img class="pic" src="./img/avatargirl.jpg" srcset="./img/avatargirl2x.jpg" alt="girl" />
               <p class="text">I can take care of your pitch</p>
             </li>
             <li class="item">
-              <img class="pic" src="./img/avatarboy.jpg" alt="boy" />
+              <img class="pic" src="./img/avatarboy.jpg" srcset="./img/avatarboy2x.jpg" alt="boy" />
               <p class="text">I can design you website</p>
             </li>
             <li class="item">
-              <img class="pic" src="./img/avatarmister.jpg" alt="man" />
+              <img class="pic" src="./img/avatarmister.jpg" srcset="./img/avatarmister2x.jpg" alt="man" />
               <p class="text">I can help marketing strategy</p>
             </li>
             <li class="item">
-              <img class="pic" src="./img/avatarlady.jpg" alt="woman" />
+              <img class="pic" src="./img/avatarlady.jpg" srcset="./img/avatarlady2x.jpg" alt="woman" />
               <p class="text">I can prototype your app</p>
             </li>
           </ul>
@@ -228,28 +251,32 @@
           <p class="text">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
           <ul class="list">
             <li class="card">
-              <img class="pic" src="./img/article1.jpg" alt="office" width="348" height="185" />
-              <div>
+              <img class="pic" src="./img/article1.jpg" srcset="./img/article1_2x.jpg" alt="office" width="350" />
+              <div class="card-text">
                 <p class="content">By <span class="bold">Wahid Ari |</span> 03 March 2019</p>
                 <h3 class="cover">Increasing Prosperity With Positive Thinking</h3>
               </div>
             </li>
             <li class="card">
-              <img class="pic" src="./img/article2.jpg" alt="windows" width="348" height="185" />
-              <div>
+              <img class="pic" src="./img/article2.jpg" srcset="./img/article2_2x.jpg" alt="windows" width="350" />
+              <div class="card-text">
                 <p class="content">By <span class="bold">Wahid Ari |</span> 03 March 2019</p>
                 <h3 class="cover">Motivation Is The First Step To Success</h3>
               </div>
             </li>
             <li class="card">
-              <img class="pic" src="./img/article3.jpg" alt="buildings" width="348" height="185" />
-              <div>
+              <img class="pic" src="./img/article3.jpg" srcset="./img/article3_2x.jpg" alt="buildings" width="350" />
+              <div class="card-text">
                 <p class="content">By <span class="bold">Wahid Ari |</span> 03 March 2019</p>
                 <h3 class="cover">Success Steps For Your Personal Or Business</h3>
               </div>
             </li>
           </ul>
-          <input class="picker" type="radiobutton" />
+          <div class="picker">
+            <div class="round"></div>
+            <div class="round"></div>
+            <div class="round"></div>
+          </div>
         </div>
       </section>
       <!-- price -->
@@ -306,7 +333,7 @@
               </svg>
               <p class="content">Product helps you see how many more days you need to work to reach your financial goal.</p>
               <div class="client-wrap">
-                <img class="pic" src="./img/client1.jpg" alt="client1" width="50" />
+                <img class="pic" src="./img/client1.jpg" srcset="./img/client1_2x.jpg" alt="client1" width="50" />
                 <div>
                   <p class="cl-name">Wahid Ari</p>
                   <p class="cl-role">Designer</p>
@@ -319,7 +346,7 @@
               </svg>
               <p class="content">Product helps you see how many more days you need to work to reach your financial goal.</p>
               <div class="client-wrap">
-                <img class="pic" src="./img/client2.jpg" alt="client2" width="50" />
+                <img class="pic" src="./img/client2.jpg" srcset="./img/client2_2x.jpg" alt="client2" width="50" />
                 <div>
                   <p class="cl-name">Wahid Ari</p>
                   <p class="cl-role">Designer</p>
@@ -332,7 +359,7 @@
               </svg>
               <p class="content">Product helps you see how many more days you need to work to reach your financial goal.</p>
               <div class="client-wrap">
-                <img class="pic" src="./img/client3.jpg" alt="client3" width="50" />
+                <img class="pic" src="./img/client3.jpg" srcset="./img/client3_2x.jpg" alt="client3" width="50" />
                 <div>
                   <p class="cl-name">Wahid Ari</p>
                   <p class="cl-role">Designer</p>
