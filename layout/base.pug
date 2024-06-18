@@ -5,15 +5,18 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Businessyyysssss
         link(rel="preconnect", href="https://fonts.googleapis.com")
-        link(rel="preconnect", href="https://fonts.gstatic.com")
-        link(rel="stylesheet", href="ttps://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap")
+        link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700&display=swap")
         link(rel="stylesheet",
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css",
             integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==",
             crossorigin="anonymous",
             referrerpolicy="no-referrer"
 )
-    body
+    script(src="https://cdn.tailwindcss.com")
+    script
+        include ../js/tailwind-config.js
+    body(class='font-main text-[16px] font-normal text-colorPrim')
         include ../includes/header.pug
         main
             block content
