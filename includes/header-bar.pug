@@ -1,4 +1,4 @@
-include ../mixins/bntMixins.pug
+include ../mixins/btnMixins.pug
 - let pages = ['Product', 'Pricing', 'Customers', 'Resources']
 nav(class='hidden md:block')
     div(class='flex gap-[30px] items-center')
@@ -6,9 +6,9 @@ nav(class='hidden md:block')
             each page in pages
                 li
                     a(class='leading-[1,75]' href =`/${page.toLowerCase()}.html`) #{page}
-        div
-            +bntHeader('Sign')
-            +bntHeader('Sign')
+        div(class='flex gap-[24px]')
+            +btnHeader('Sign In', 'colorPrimAdd', 'colorSec', 'colorSecAddHov', 'colorAccentAdd')
+            +btnHeader('Sign Up', 'colorSec', 'colorAccent', 'colorAccentHov') 
 
 button(class='md:hidden' type='button' data-menu-open)
     svg(class='flex justify-center items-center h-[32px] w-[28px] fill-colorPrimAdd')

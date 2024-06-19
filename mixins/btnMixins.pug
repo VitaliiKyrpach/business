@@ -1,2 +1,3 @@
-mixin bntHeader(text)
-    button(type='button') #{text}
+mixin btnHeader(text, color, back, hover, border='border-none')
+    button(class=`text-${color} font-semibold bg-${back} border border-${border} py-[8px] px-[23px] rounded-[4px] text-nowrap hover:bg-${hover} transition-colors` type='button') #{text}
+    

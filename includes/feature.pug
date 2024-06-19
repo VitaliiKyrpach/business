@@ -1,0 +1,18 @@
+-
+    let items = [{bg: 'colorAccent',svg: 'icon-cursor', h3: 'First click tests', text: 'While most people enjoy casino gambling.'},
+        {bg: 'colorFeat1',svg: 'icon-wave', h3: 'Design surveys', text: 'Sports betting, lottery and bingo playing for the fun.'},
+        {bg: 'colorFeat2',svg: 'icon-heart', h3: 'Preference tests', text: 'The Myspace page defines the individual.'},
+        {bg: 'colorFeat3',svg: 'icon-clock', h3: 'Five second tests', text: 'Personal choices and the overall personality of the person.'}];
+
+section
+    div(class='container mx-auto flex flex-col items-center')
+        h2(class='text-[32px] font-bold leading-[1.5] text-center mb-[50px] max-w-[530px]') Product was Built Specifically for You
+        ul(class='flex flex-col gap-[32px] mb-[32px] md:flex-row md:flex-wrap md:justify-center bg:gap-[30px] bg:mb-[50px]')
+            each item in items
+                li(class='flex flex-col items-center w-[240px] bg:w-[230px] bg:items-start')
+                    div(class=`flex justify-center items-center w-[50px] h-[50px] bg-${item.bg} rounded-[18px] mb-[24px]`)
+                        svg(class='h-[18px]')
+                            use(href=`../img/sprite.svg#${item.svg}`)
+                    h3(class='text-[22px] font-semibold leading-[1.5] mb-[8px]') #{item.h3}
+                    p(class='leading-[1.6] text-center bg:text-left') #{item.text}
+        button(class=`text-colorSec font-bold bg-colorAccent border py-[14px] px-[34px] rounded-[4px] text-nowrap hover:bg-colorAccentHov transition-colors md:px-[45px]` type='button' data-modal-open) SIGN UP NOW
