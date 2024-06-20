@@ -1,0 +1,40 @@
+-
+    let itemsDesc = [{pic: 'management',alt: "papers", title: 'Management', preTitle:'Effortless Validation for', text: ['The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.', 'While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun', 'If you are looking for a new way to promote your business that won’t cost you more money'], caption: ['Accessory makers', 'Alterationists']},
+        {pic: 'support',alt: "notebook", title: 'Customer Support', preTitle: 'Easier decision making for', text: ['The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.', 'Never worry about overpaying for your energy again.', 'We will only switch you to energy companies that we trust and will treat you right', 'We track the markets daily and know where the savings are.'], color: ['colorFeat4', 'colorFeat3', 'colorFeat1']},
+        {pic: 'collaboration',alt: "folder", title: 'Collaborative',preTitle:'Optimisation for', text: ['Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.', 'While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun', 'If you are looking for a new way to promote your business that won’t cost you more money'], caption: ['Accessory makers', 'Alterationists']}];
+
+section(class='pt-[100px] pb-[68px] md:pt-[50px] md:pb-[100px]')
+    div(class='container mx-auto flex flex-col items-center px-[30px]')
+        ul(class='flex flex-col gap-[100px]')
+            each item, i in itemsDesc
+                if i == 1
+                    li(class='flex flex-col gap-[50px] md:flex-row md:gap-[35px] bg:gap-[84px]')
+                        picture
+                            source(media="(min-width: 1024px)" srcset=`../img/${item.pic}.png, ../img/${item.pic}2x.png 2x` width="610" )
+                            source(media="(min-width: 411px)" srcset=`../img/${item.pic}_mob.png 1x, ../img/${item.pic}_mob2x.png 2x`)
+                            img(class='shrink-0' src=`/img/${item.pic}.png` alt=`${item.alt}` width="350")
+                        div(class='max-w-[350px] md:max-w-[300px] bg:max-w-[486px]')
+                            p(class='font-semibold mb-[8px]') #{item.preTitle}
+                            h2(class='text-[32px] leading-[1.5] font-bold mb-[16px]') #{item.title}
+                            p(class='leading-[1.6] mb-[16px]') #{item.text[0]}
+                            div(class='flex flex-col gap-[16px]')
+                                each card, o in item.color
+                                    div(class='flex gap-[30px] items-center')
+                                        div(class=`flex justify-center items-center shrink-0 w-[35px] h-[35px] bg-${card} rounded-[14px]`)
+                                            svg(class='w-[16px] h-[12px]')
+                                                use(href=`../img/sprite.svg#icon-check`)
+                                        p #{item.text[o+1]}
+                else
+                    li(class='flex flex-col gap-[50px] md:flex-row-reverse md:gap-[35px] bg:gap-[84px]')
+                        picture
+                            source(media="(min-width: 1024px)" srcset=`../img/${item.pic}.png, ../img/${item.pic}2x.png 2x` width="610" )
+                            source(media="(min-width: 411px)" srcset=`../img/${item.pic}_mob.png 1x, ../img/${item.pic}_mob2x.png 2x`)
+                            img(src=`/img/${item.pic}.png` alt=`${item.alt}` width="350")
+                        div(class='max-w-[350px] md:max-w-[300px] bg:max-w-[486px]')
+                            p(class='font-semibold mb-[8px]') #{item.preTitle}
+                            h2(class='text-[32px] leading-[1.5] font-bold mb-[16px]') #{item.title}
+                            p(class='leading-[1.6] mb-[16px]') #{item.text[0]}
+                            p(class='font-semibold leading-[1.6] mb-[12px]') #{item.caption[0]}
+                            p(class='leading-[1.6] mb-[16px]') #{item.text[1]}
+                            p(class='font-semibold leading-[1.6] mb-[12px]') #{item.caption[1]}
+                            p(class='leading-[1.6]') #{item.text[2]}
