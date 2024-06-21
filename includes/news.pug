@@ -1,0 +1,20 @@
+-
+    let itemsNews = [{img: 'article1', title: 'Increasing Prosperity With Positive Thinking', author: 'Wahid Ari', time: '03 March 2019', alt: 'office'},
+        {img: 'article2', title: 'Motivation Is The First Step To Success', author: 'Wahid Ari', time: '03 March 2019', alt: 'windows'},
+        {img: 'article3', title: 'Success Steps For Your Personal Or Business', author: 'Wahid Ari', time: '03 March 2019', alt: 'buildings'}];
+
+section(class='pt-[100px]')
+    div(class='container mx-auto px-[30px] flex flex-col items-center bg:px-[20px] max-w-[1140px]')
+        h2(class='text-[34px] font-bold leading-[1.5] mb-[8px] bg:mb-[10px] bg:self-start') Contents Strategies
+        p(class='text-center font-medium leading-[1.6] mb-[40px] max-w-[350px] bg:max-w-[460px] bg:self-start bg:text-left') We focus on ergonomics and meeting you where you work. It's only a keystroke away.
+        ul(class='w-full max-w-[1100px] flex flex-col gap-[16px] items-center md:gap-[30px] bg:flex-row bg:gap-[10px] bg:justify-between')
+            each item in itemsNews
+                li(class='max-w-[350px] md:border md:border-colorSecAdd md:rounded-[4px]')
+                    img(src=`../img/${item.img}.jpg` srcset=`../img/${item.img}_2x.jpg` alt=item.alt)
+                    div(class='pt-[24px] pb-[40px] md:pl-[24px]')
+                        p(class='leading-[1.75] mb') By <span class='font-bold'>#{item.author} |</span> #{item.time}
+                        h3(class='text-[24px] leading-[1.67] font-bold text-left cursor-pointer hover:text-colorAccent transition-colors') #{item.title}
+        div(class='flex gap-[10px] mt-[45px]')
+            button(class='w-[16px] h-[16px] bg-colorSecAdd rounded-[50%]' type='button' data-news-prev)
+            button(class='w-[16px] h-[16px] bg-colorAccent rounded-[50%]' type='button' data-news-center)
+            button(class='w-[16px] h-[16px] bg-colorSecAdd rounded-[50%]' type='button' data-news-next)
