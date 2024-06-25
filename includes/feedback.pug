@@ -1,0 +1,26 @@
+-
+    let itemsFeedback = [{avatar: 'client1', comment: 'Product helps you see how many more days you need to work to reach your financial goal.', author: ['Nora Cole', 'designer'], rating: 5},
+        {avatar: 'client2', comment: 'When you play games you need no distraction.', author: ['Wahid Ari', 'gamer'], rating: 2},
+        {avatar: 'client3', comment: 'It is not a bad thing you know, especialy when you are in lack of a helper', author: ['John Broover', 'manager'], rating: 4}]
+
+section(class='pt-[100px] mb-[100px]')
+    div(class='container mx-auto px-[30px] flex flex-col items-center bg:px-[20px] max-w-[1140px]')
+        h2(class='text-[34px] font-bold leading-[1.5] mb-[8px] bg:mb-[10px]') What Clients Say
+        p(class='text-center font-medium leading-[1.6] mb-[40px] max-w-[320px] md:max-w-[540px]') Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
+        ul(class='w-full flex flex-col items-center gap-[32px] bg:flex-row bg:gap-[10px] bg:justify-between max-w-[1100px]')
+            each item in itemsFeedback
+                li(class='w-[327px] h-[240px] p-[28px] rounded-[5px] border border-colorSecAdd flex flex-col justify-between')
+                    div
+                        div(class='flex gap-[3px] mb-[16px]')
+                            each val, i in [...Array(5).keys()]
+                                svg(class='w-[18px] h-[18px]')
+                                    if i+1 <= item.rating
+                                        use(href='../img/sprite.svg#icon-starfull')
+                                    else 
+                                        use(href='../img/sprite.svg#icon-starhole')
+                        p(class='text-colorSecAdd leading-[1.75]') #{item.comment}
+                    div(class='flex gap-[14px]')
+                        img(class='w-[50px] h-[50px]' src=`../img/${item.avatar}.jpg` srcset=`../img/${item.avatar}_2x.jpg` alt=item.avatar)
+                        div
+                            p(class='font-semibold text-colorAccent') #{item.author[0]}
+                            p(class='font-medium text-[14px] leading-[1.7]') #{item.author[1]}
