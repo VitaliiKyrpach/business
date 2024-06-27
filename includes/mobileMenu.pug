@@ -9,9 +9,9 @@ div(class="fixed top-0 right-0 w-full h-full bg-colorBackdrop backdrop-blur-[5px
             each page in pages
                 li
                     if page == 'Product'
-                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/out/index.html`) #{page}
+                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/index.html`) #{page}
                     else
-                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/out/${page.toLowerCase()}.html`) #{page}
+                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/${page.toLowerCase()}.html`) #{page}
         div(class='flex gap-[24px] flex-col items-center w-[110px] mx-auto')
             +btn('Sign In', 'colorPrimAdd', 'colorSec', 'colorSecAddHov', 'semibold', '16px', '102px', '42px', '4px', 'colorAccentAdd')(modal="login")
             +btn('Sign Up', 'colorSec', 'colorAccent', 'colorAccentHov', 'semibold', '16px', '110px', '42px', '4px')(modal="register")

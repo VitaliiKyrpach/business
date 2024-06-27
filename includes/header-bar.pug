@@ -5,7 +5,10 @@ nav(class='hidden md:block')
         ul(class='flex w-[330px] items-center justify-between bg:w-[376px]')
             each page in pages
                 li
-                    a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/${page.toLowerCase()}.html`) #{page}
+                    if page == 'Product'
+                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/index.html`) #{page}
+                    else
+                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/${page.toLowerCase()}.html`) #{page}
         div(class='flex gap-[24px] md:flex-col md:gap-[10px] md:items-center bg:flex-row bg:gap-[24px]')
             +btn('Sign In', 'colorPrimAdd', 'colorSec', 'colorSecAddHov', 'semibold', '16px', '102px', '42px', '4px', 'colorAccentAdd')(modal="login")
             +btn('Sign Up', 'colorSec', 'colorAccent', 'colorAccentHov', 'semibold', '16px', '110px', '42px', '4px')(modal="register") 
