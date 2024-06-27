@@ -10,7 +10,7 @@ section(class='pt-[100px]')
         ul(class='w-full max-w-[1100px] flex flex-col gap-[16px] items-center md:gap-[30px] bg:flex-row bg:gap-[10px] bg:justify-between')
             each item in itemsNews
                 li(class='max-w-[350px] md:border md:border-colorSecAdd md:rounded-[4px]')
-                    img(src=`../img/${item.img}.jpg` srcset=`../img/${item.img}_2x.jpg` alt=item.alt)
+                    img(src=`./img/${item.img}.jpg` srcset=`./img/${item.img}_2x.jpg` alt=item.alt)
                     div(class='pt-[24px] pb-[40px] md:pl-[24px]')
                         p(class='leading-[1.75] mb') By <span class='font-bold'>#{item.author} |</span> #{item.time}
                         h3(class='text-[24px] leading-[1.67] font-bold text-left cursor-pointer hover:text-colorAccent transition-colors') #{item.title}

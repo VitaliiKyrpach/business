@@ -10,9 +10,9 @@ section(class='pt-[100px] pb-[68px] md:pt-[50px] md:pb-[100px]')
                 if i == 1
                     li(class='flex flex-col gap-[50px] md:flex-row md:gap-[35px] bg:gap-[84px]')
                         picture
-                            source(media="(min-width: 1024px)" srcset=`../img/${item.pic}.png, ../img/${item.pic}2x.png 2x` width="610" )
-                            source(media="(min-width: 411px)" srcset=`../img/${item.pic}_mob.png 1x, ../img/${item.pic}_mob2x.png 2x`)
-                            img(class='shrink-0' src=`/img/${item.pic}.png` alt=`${item.alt}` width="350")
+                            source(media="(min-width: 1024px)" srcset=`./img/${item.pic}.png, ./img/${item.pic}2x.png 2x` width="610" )
+                            source(media="(min-width: 411px)" srcset=`./img/${item.pic}_mob.png 1x, ./img/${item.pic}_mob2x.png 2x`)
+                            img(class='shrink-0' src=`./img/${item.pic}.png` alt=`${item.alt}` width="350")
                         div(class='max-w-[350px] md:max-w-[300px] bg:max-w-[486px]')
                             p(class='font-semibold mb-[8px]') #{item.preTitle}
                             h2(class='text-[32px] leading-[1.5] font-bold mb-[16px]') #{item.title}
@@ -22,14 +22,14 @@ section(class='pt-[100px] pb-[68px] md:pt-[50px] md:pb-[100px]')
                                     div(class='flex gap-[30px] items-center')
                                         div(class=`flex justify-center items-center shrink-0 w-[35px] h-[35px] bg-${card} rounded-[14px]`)
                                             svg(class='w-[16px] h-[12px]')
-                                                use(href=`../img/sprite.svg#icon-check`)
+                                                use(href=`./img/sprite.svg#icon-check`)
                                         p #{item.text[o+1]}
                 else
                     li(class='flex flex-col gap-[50px] md:flex-row-reverse md:gap-[35px] bg:gap-[84px]')
                         picture
-                            source(media="(min-width: 1024px)" srcset=`../img/${item.pic}.png, ../img/${item.pic}2x.png 2x` width="610" )
-                            source(media="(min-width: 411px)" srcset=`../img/${item.pic}_mob.png 1x, ../img/${item.pic}_mob2x.png 2x`)
-                            img(src=`/img/${item.pic}.png` alt=`${item.alt}` width="350")
+                            source(media="(min-width: 1024px)" srcset=`./img/${item.pic}.png, ./img/${item.pic}2x.png 2x` width="610" )
+                            source(media="(min-width: 411px)" srcset=`./img/${item.pic}_mob.png 1x, ./img/${item.pic}_mob2x.png 2x`)
+                            img(src=`./img/${item.pic}.png` alt=`${item.alt}` width="350")
                         div(class='max-w-[350px] md:max-w-[300px] bg:max-w-[486px]')
                             p(class='font-semibold mb-[8px]') #{item.preTitle}
                             h2(class='text-[32px] leading-[1.5] font-bold mb-[16px]') #{item.title}

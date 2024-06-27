@@ -15,12 +15,12 @@ section(class='pt-[100px] mb-[100px]')
                             each val, i in [...Array(5).keys()]
                                 svg(class='w-[18px] h-[18px]')
                                     if i+1 <= item.rating
-                                        use(href='../img/sprite.svg#icon-starfull')
+                                        use(href='./img/sprite.svg#icon-starfull')
                                     else 
-                                        use(href='../img/sprite.svg#icon-starhole')
+                                        use(href='./img/sprite.svg#icon-starhole')
                         p(class='text-colorSecAdd leading-[1.75]') #{item.comment}
                     div(class='flex gap-[14px]')
-                        img(class='w-[50px] h-[50px]' src=`../img/${item.avatar}.jpg` srcset=`../img/${item.avatar}_2x.jpg` alt=item.avatar)
+                        img(class='w-[50px] h-[50px]' src=`./img/${item.avatar}.jpg` srcset=`./img/${item.avatar}_2x.jpg` alt=item.avatar)
                         div
                             p(class='font-semibold text-colorAccent') #{item.author[0]}
                             p(class='font-medium text-[14px] leading-[1.7]') #{item.author[1]}

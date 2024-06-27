@@ -11,6 +11,6 @@ section(class='pt-[73px] md:pt-[50px] bg-back-stuff bg-[center_top] bg-[length:1
         ul(class='flex flex-col gap-[32px] mb-[32px] md:mb-[50px] md:flex-row md:flex-wrap md:justify-center md:gap-y-[25px] md:gap-x-[50px] bg:gap-x-[100px]')
             each card, p in itemsStuff
                 li(class=`flex gap-[14px] items-center even:flex-row-reverse max-w-[408px] order-${p+1} bg:last:order-2`)
-                    img(class='w-[90px] h-[90px]' src=`../img/${card.img}.jpg` srcset=`../img/${card.img}2x.jpg` alt=card.alt)
+                    img(class='w-[90px] h-[90px]' src=`./img/${card.img}.jpg` srcset=`./img/${card.img}2x.jpg` alt=card.alt)
                     p(class='font-medium text-center max-w-full md:w-stuffMD h-[65px] bg-colorSec rounded-[25px] pt-[12px] px-[28px] pb-[4px] shadow-stuffShadow') #{card.text}
         +btn('Contact our expert', 'colorSec', 'colorAccent', 'colorAccentHov', 'bold', '16px', '216px', '53px', '4px')(modal="contact") 
