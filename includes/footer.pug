@@ -20,13 +20,13 @@ footer
                 ul(class='flex flex-col items-center bg:items-start')
                     each res in itemsFooter.resource
                         li
-                            a(class='leading-[2.16]' href="") #{res}
+                            a(class='leading-[2.16] hover:font-medium transition-[font]' href="") #{res}
             div(class='flex flex-col items-center gap-[8px] mb-[32px] bg:items-start')
                 h3(class='text-[20px] leading-[1.5] font-medium') Legal Stuff
-                ul(class='flex flex-col items-center bg:items-start')
+                ul(class='flex flex-col items-center bg:items-start w-[133px]')
                     each stuff in itemsFooter.stuff
                         li
-                            a(class='leading-[2.16]' href="") #{stuff}
+                            a(class='leading-[2.16] hover:font-medium transition-[font]' href="") #{stuff}
             div(class='flex flex-col items-center gap-[34px] bg:items-start md:mx-auto bg:m-0')
                 p(class='font-medium text-[20px] leading-[1.5] max-w-[280px] text-center bg:text-left') knowing you're always on the best energy deal.
                 form(class='flex flex-col items-center gap-[21px] w-[325px] bg:items-start md:gap-[25px]')

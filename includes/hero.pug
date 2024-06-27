@@ -8,8 +8,8 @@ section(class='pt-[30px] pb-[100px] md:pt-[25px]')
         div(class='max-w-[465px]')
             h1(class='text-[36px] leading-[1.67] font-bold text-center max-w-[400px] mb-[16px] bg:text-[40px] md:text-left bg:leading-[1.5] bg:mb-[18px]') Work at the speed of thought
             p(class='text-[18px] leading-[1.55] text-center max-w-[326px] mb-[16px] mx-auto md:text-left bg:mb-[45px] md:ml-0') Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.
-            div(class='flex gap-[28px] flex-wrap justify-center items-center md:gap-[30px]')
-                button(class=`text-colorSec font-semibold bg-colorAccent border py-[14px] px-[24px] rounded-[4px] text-nowrap hover:bg-colorAccentHov transition-colors md:px-[45px]` type='button' data-modal-open) Get started
+            div(class='flex gap-[28px] flex-wrap justify-center items-center md:gap-[30px]')(modal="register") 
+                +btn('Get started', 'colorSec', 'colorAccent', 'colorAccentHov', 'bold', '16px', '178px', '53px', '4px') 
                 button(class='flex gap-[8px] shrink-0 items-center group' type='button')
                     svg(class='w-[20px] h-[17px] fill-colorAccent group-hover:fill-colorAccentHov transition-colors')
                         use(href='../img/sprite.svg#icon-play')

@@ -24,7 +24,8 @@ tailwind.config = {
             colorFeat2: '#740A76',
             colorFeat3: '#F03E3D',
             colorFeat4: '#FF9900',
-            colorSocials: '#EDFFFC'
+            colorSocials: '#EDFFFC',
+            colorBackdrop: 'rgba(25, 28, 38, 0.4)'
         },
         boxShadow: {
             headerShadow: '0px 2px 6px rgba(0, 0, 0, 0.25)',

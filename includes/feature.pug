@@ -15,4 +15,4 @@ section(class='pt-[16px] pb-[38px] md:pt-0 md:pb-[43px] bg-back-feature bg-[cent
                             use(href=`../img/sprite.svg#${item.svg}`)
                     h3(class='text-[22px] font-semibold leading-[1.5] mb-[8px]') #{item.h3}
                     p(class='leading-[1.6] text-center bg:text-left') #{item.text}
-        button(class=`text-colorSec font-bold bg-colorAccent border py-[14px] px-[34px] rounded-[4px] text-nowrap hover:bg-colorAccentHov transition-colors md:px-[45px]` type='button' data-modal-open) SIGN UP NOW
+        +btn('SIGN UP NOW', 'colorSec', 'colorAccent', 'colorAccentHov', 'bold', '16px', '175px', '53px', '4px')(modal="register") 

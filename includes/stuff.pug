@@ -13,4 +13,4 @@ section(class='pt-[73px] md:pt-[50px] bg-back-stuff bg-[center_top] bg-[length:1
                 li(class=`flex gap-[14px] items-center even:flex-row-reverse max-w-[408px] order-${p+1} bg:last:order-2`)
                     img(class='w-[90px] h-[90px]' src=`../img/${card.img}.jpg` srcset=`../img/${card.img}2x.jpg` alt=card.alt)
                     p(class='font-medium text-center max-w-full md:w-stuffMD h-[65px] bg-colorSec rounded-[25px] pt-[12px] px-[28px] pb-[4px] shadow-stuffShadow') #{card.text}
-        button(class=`text-colorSec font-bold bg-colorAccent border py-[14px] px-[30px] mx-auto rounded-[4px] text-nowrap hover:bg-colorAccentHov transition-colors` type='button' data-modal-open) Contact our expert
+        +btn('Contact our expert', 'colorSec', 'colorAccent', 'colorAccentHov', 'bold', '16px', '216px', '53px', '4px')(modal="contact") 
