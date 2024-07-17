@@ -6,10 +6,10 @@ nav(class='hidden md:block')
             each page in pages
                 li
                     if page == 'Product'
-                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/index.html`) #{page}
+                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`index.html`) #{page}
                     else
                         //- a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/${page.toLowerCase()}.html`) #{page}
-                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`/404.html`) #{page}
+                        a(class='leading-[1,75] hover:font-medium transition-[font]' href =`404.html`) #{page}
         div(class='flex gap-[24px] md:flex-col md:gap-[10px] md:items-center bg:flex-row bg:gap-[24px]')
             +btn('Sign In', 'colorPrimAdd', 'colorSec', 'colorSecAddHov', 'semibold', '16px', '102px', '42px', '4px', 'colorAccentAdd')(modal="login", class='modal')
             +btn('Sign Up', 'colorSec', 'colorAccent', 'colorAccentHov', 'semibold', '16px', '110px', '42px', '4px')(modal="register", class='modal') 
