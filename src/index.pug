@@ -1,5 +1,8 @@
 extends pug/layout/base
 
+block vars
+    - var title = 'Business'
+
 block content
     include pug/includes/hero.pug
     include pug/includes/feature.pug
@@ -8,4 +11,5 @@ block content
     include pug/includes/news.pug
     include pug/includes/price.pug
     include pug/includes/feedback.pug
-    include pug/includes/promo.pug  
+    include pug/includes/promo.pug
+    include pug/includes/modal.pug
